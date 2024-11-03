@@ -1,0 +1,8 @@
+{
+    "Message": true,
+    "User": true,
+    "Chat": true,
+    "Contact": true,
+    "Group": true,
+    "Notification": true
+}
