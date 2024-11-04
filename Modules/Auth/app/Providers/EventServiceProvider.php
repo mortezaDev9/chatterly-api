@@ -4,10 +4,7 @@ declare(strict_types=1);
 
 namespace Modules\Auth\Providers;
 
-use Illuminate\Auth\Events\Registered;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Modules\Auth\Listeners\SendEmailVerificationNotification;
-use Modules\Auth\Listeners\SendWelcomeEmail;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -16,12 +13,7 @@ class EventServiceProvider extends ServiceProvider
      *
      * @var array<string, array<int, string>>
      */
-    protected $listen = [
-        Registered::class => [
-            SendWelcomeEmail::class,
-            SendEmailVerificationNotification::class,
-        ]
-    ];
+    protected $listen = [];
 
     /**
      * Indicates if events should be discovered.
