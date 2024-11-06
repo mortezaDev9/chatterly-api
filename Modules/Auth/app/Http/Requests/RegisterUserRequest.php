@@ -15,11 +15,11 @@ class RegisterUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'username'              => ['required', 'string', 'unique:users,username', 'max:255'],
-            'email'                 => ['required', 'email', 'unique:users,email', 'max:255'],
-            'password'              => ['required', 'string', 'confirmed', Password::defaults(), 'max:255'],
-            'password_confirmation' => ['required', 'string', 'max:255'],
-            'agreement'             => ['required', 'accepted'],
+            'user_id'    => ['nullable', 'string', 'unique:users,user_id'],
+            'first_name' => ['required', 'string', 'max:255'],
+            'last_name'  => ['nullable', 'string', 'max:255'],
+            'phone'      => ['required', 'string', 'unique:users,phone', 'digits:11', 'regex:/^\+?[0-9]\d{1,11}$/'],
+            'avatar'     => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
         ];
     }
 
