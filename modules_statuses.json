@@ -1,0 +1,10 @@
+{
+    "Message": true,
+    "User": true,
+    "Chat": true,
+    "ContactUser": true,
+    "Group": true,
+    "Auth": true,
+    "Search": true,
+    "Device": true
+}

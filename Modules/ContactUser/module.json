@@ -1,0 +1,11 @@
+{
+    "name": "ContactUser",
+    "alias": "contactuser",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\ContactUser\\Providers\\ContactUserServiceProvider"
+    ],
+    "files": []
+}
